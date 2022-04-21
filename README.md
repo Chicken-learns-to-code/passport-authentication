@@ -18,4 +18,6 @@ Watch out for these libraries:
 </pre>
 <pre>
     <code class="language-console">npm install</code>
-</pre>               
+</pre>
+MongoDB
+Open "config/mongoose.js"           
