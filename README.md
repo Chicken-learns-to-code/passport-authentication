@@ -1,6 +1,7 @@
 # passport-authentication
 Learn Node.js With Passport Authentication
 #
+Watch out for these libraries:
 <pre>
     <code class="language-console">
         "dependencies": {
