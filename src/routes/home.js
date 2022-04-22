@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
 const homController = require('../app/controllers/HomeCotroller');
-
-route.get('/',homController.index);
+const { forwardAuthenticated , ensureAuthenticated } = require('../config/auth');
+route.get('/', ensureAuthenticated ,homController.index);
 
 module.exports = route;

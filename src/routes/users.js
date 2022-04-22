@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../app/controllers/UserController');
-
-router.get('/login', userController.login);
-router.get('/register', (req, res) => res.send('Register'));
+const { forwardAuthenticated } = require('../config/auth');
+router.get('/login', forwardAuthenticated , userController.login);
+router.post('/login', userController.loginPost);
+router.get('/register', forwardAuthenticated , userController.register);
+router.post('/register', userController.registerPost);
+router.get('/logout', userController.logout);
 module.exports = router;
